@@ -26,24 +26,37 @@
 
                 <div class="content">
                     <h4> Password Generator</h4>
-                    <br />
                     <input type="text" id="display">
                     <br />
-                    <input type="range" min="8" max="128" name="slider" id="slider">
                     <br />
-                    <button onclick="generate()"> Generate </button>
-                    <button onclick=""> Copy to Clipboard </button>
-                    <div id="length"></div>
+                    <div>
+                      Password Length: <span id="selected-complexity">0</span><br />
+                      <input 
+                         onchange="handleChange()"
+                         type="range" 
+                         id="complexity" 
+                         min="8" 
+                         max="128">
+                    </div>
+                <div>
+                    Character types: <br />
+                    <input id='cb_special' type='checkbox' value='special' /> Special Character <br/>
+                    <input id='cb_numeric' type='checkbox' value='numeric' /> Numeric <br/>
+                    <input id='cb_lowercase' type='checkbox' value='lowercase' /> Lowercase Characters <br/>
+                    <input id='cb_uppercase' type='checkbox' value='uppercase' /> Uppercase Character <br/>
                 </div>
-                
-                <div class="previous_passwords">
+                    
+                   
+                    <button onclick="generate()"> Generate </button>
+                    <button onclick="copyPassword()"> Copy to Clipboard </button>
+                    <div id="length"></div>
+                  </div>
+                  
+                  <!-- <div class="previous_passwords">
                     <b> Previous Passwords</b>
                     <br />
                     <div id="lastNums"></div>
-                </div>
-            </div>
-
-        </div>
+                  </div> 
     </div>
 
 </body>
