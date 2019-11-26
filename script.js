@@ -15,7 +15,7 @@ function handleChange() {
        var useNumeric = document.getElementById("cb_numeric").checked;
        var useLowercase = document.getElementById("cb_lowercase").checked;
        var useUppercase = document.getElementById("cb_uppercase").checked;
-
+        //  My friend taught me about conditionals and ! (logical operator).  
        if(!useSpecialChars && !useNumeric && !useLowercase && !useUppercase){
 
         alert("Please make at least one selection.")
@@ -34,15 +34,15 @@ function handleChange() {
   
       var password = '';
 
-      // create for loop to choose password characters
+      // Create for loop to choose password characters
       for (var i = 0; i <= complexity; i++) {
           password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
       }
   
-      //add password to textbox/display area
+      //Add password to textbox/display area
       document.getElementById('display').value = password;
   } 
-
+    //Add ability to copy and paste
   function copyPassword(){
       var password = document.getElementById('display');
       password.select();
