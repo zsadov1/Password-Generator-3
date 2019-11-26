@@ -1,6 +1,6 @@
 //generate random password
 function handleChange() {
-    const complexity = document.getElementById("complexity");  
+    var complexity = document.getElementById("complexity");  
     document.getElementById("selected-complexity").innerHTML = complexity.value;
   };
   
@@ -8,13 +8,13 @@ function handleChange() {
   function generate() {
     
        // How long should out password be?
-       const complexity = document.getElementById("complexity").value;
+       var complexity = document.getElementById("complexity").value;
     
        // What requirements should it have?
-       const useSpecialChars = document.getElementById("cb_special").checked;
-       const useNumeric = document.getElementById("cb_numeric").checked;
-       const useLowercase = document.getElementById("cb_lowercase").checked;
-       const useUppercase = document.getElementById("cb_uppercase").checked;
+       var useSpecialChars = document.getElementById("cb_special").checked;
+       var useNumeric = document.getElementById("cb_numeric").checked;
+       var useLowercase = document.getElementById("cb_lowercase").checked;
+       var useUppercase = document.getElementById("cb_uppercase").checked;
 
        if(!useSpecialChars && !useNumeric && !useLowercase && !useUppercase){
 
@@ -23,10 +23,10 @@ function handleChange() {
        }
     
        // Requirement values
-       const specialChars = '!@#$%^&*()_+';
-       const numericChars = '1234567890';
-       const lowerCaseChars = 'abcdefghijklmnopqrstuvwxyz';
-       const upperCaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+       var specialChars = '!@#$%^&*()_+';
+       var numericChars = '1234567890';
+       var lowerCaseChars = 'abcdefghijklmnopqrstuvwxyz';
+       var upperCaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     
        // Build out the final value string in which to build the password from.
        let values = `${useUppercase ? upperCaseChars : ''}${useLowercase ? lowerCaseChars : ''}${useSpecialChars ? specialChars: ''}${useNumeric ? numericChars : ''}`;
@@ -44,7 +44,7 @@ function handleChange() {
   } 
 
   function copyPassword(){
-      const password = document.getElementById('display');
+      var password = document.getElementById('display');
       password.select();
       document.execCommand("copy");
       alert('password copied!')
