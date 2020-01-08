@@ -6,7 +6,13 @@ I made this password generator for the University of Richmond Bootcamp Homework 
 
 As a someone who cares about security, I need a secure password, so that I can keep my personal information safe. 
 
+![Portfolio Site](images/Passwordgenerator.png)
 
+## Credits
+
+binary.png Created by: GDJ downloaded at https://pixabay.com/vectors/computer-cyber-circuitry-circuits-3163436/
+
+teal-abstract.jpg Created by: Bia Andrade downloaded at https://unsplash.com/photos/PO8Woh4YBD8
 
 
 
