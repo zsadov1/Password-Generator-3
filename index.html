@@ -1,63 +1,66 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Password Generator</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheet.css">
-    
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="/CSS/stylesheet.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
 <body>
-    <script src="script.js"></script>
+    
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">Password Generator</h1>
+            <p class="lead">Generate your new password.</p>
+        </div>
+    </div>
 
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand mx-auto" href="#">Password Generator</a>
-    </nav>
-
-    <div class="container">
-
+    <div class="container-fluid">
         <div class="row">
-
             <div class="col-lg-8 col-sm-12 mx-auto">
-
                 <div class="content">
-                    <h4> Password Generator</h4>
-                    <input type="text" id="display">
-                    <br />
-                    <br />
-                    <div>
-                      Password Length: <span id="selected-complexity">0</span><br />
-                      <input 
+                    <input  placeholder="Your password will generate here..." type="text" id="display">
+                        <br />
+                        <br />
+                    <div class="checkColor">
+                        Password Length: <span  id="selected-complexity">0</span><br />
+                    <input
                          onchange="handleChange()"
                          type="range" 
                          id="complexity" 
                          min="8" 
                          max="128">
                     </div>
-                <div>
+
+                <div class="checkColor">
                     Character types: <br />
                     <input id='cb_special' type='checkbox' value='special' /> Special Character <br/>
                     <input id='cb_numeric' type='checkbox' value='numeric' /> Numeric <br/>
                     <input id='cb_lowercase' type='checkbox' value='lowercase' /> Lowercase Characters <br/>
                     <input id='cb_uppercase' type='checkbox' value='uppercase' /> Uppercase Character <br/>
                 </div>
-                    
-                   
-                    <button onclick="generate()"> Generate </button>
-                    <button onclick="copyPassword()"> Copy to Clipboard </button>
+
+                <br>
+
+                    <button onclick="generate()" class="btn btn-primary btn-lg btn-block tn btn-light"> Generate </button>
+                    <button onclick="copyPassword()" class="btn btn-secondary btn-lg btn-block btn btn-info"> Copy to Clipboard </button>
                     <div id="length"></div>
                   </div>
-                  
-                  <!-- <div class="previous_passwords">
-                    <b> Previous Passwords</b>
-                    <br />
-                    <div id="lastNums"></div>
-                  </div> 
+            </div>
+        </div>
     </div>
+        
+<footer>
+        <div class="container">
+            Zachary Sadovszky &copy;
+        </div>
+</footer>
 
-</body>
+</body> 
+
+     <script src="/JS/script.js"></script>
+
 </html>
